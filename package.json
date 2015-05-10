@@ -1,0 +1,19 @@
+{
+  "name": "adda-helper",
+  "version": "0.0.1",
+  "description": "Divsense ADDA API helper",
+  "main": "index.js",
+  "author": {
+    "name": "Oleg Kirichenko",
+    "email": "oleg4564@me.com"
+  },
+  "keywords": [
+    "divsense",
+    "mindmap"
+  ],
+  "repository": {
+    "name": "git",
+    "url": "https://github.com/divsense/adda-helper.git"
+  },
+  "license": "ISC"
+}
