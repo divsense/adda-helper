@@ -15,5 +15,8 @@
     "name": "git",
     "url": "https://github.com/divsense/adda-helper.git"
   },
+  "dependencies": {
+    "array.prototype.find": "~0.1.1"
+  },
   "license": "ISC"
 }

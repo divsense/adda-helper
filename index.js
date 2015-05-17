@@ -1,5 +1,6 @@
 // ADDA Helpers
 //
+require("array.prototype.find");
 
 var props = function( obj ){
 	return Object.keys( obj ).reduce(function(m,a){
@@ -105,6 +106,22 @@ var getUnitData = function( level, dataAttr, node ){
 	}, "");
 }
 
+var setUnitData = function( level, dataAttr, value, node ){
+
+	node[ level ] = node[ level ] || [];
+
+	var ud = node[ level ].find(function(a){ return a[0] === dataAttr });
+
+	if( ud ){
+		ud[1] = value;
+	}
+	else{
+		node[ level ].push( [ dataAttr, value ] );
+	}
+
+	return node[ level ];
+}
+
 exports.makeNode = makeNode;
 exports.setChildNodes = setChildNodes;
 exports.setChild = setChild;
@@ -112,6 +129,7 @@ exports.init = init;
 
 exports.addChildNode = addChildNode;
 exports.getUnitData = getUnitData;
+exports.setUnitData = setUnitData;
 
 exports.toArray = function( set ){
 	return toArray( set, "__root__", [] );
